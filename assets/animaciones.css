@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+.hero__card,
+.offers__categories {
+    animation: move-right 1s linear;
+}
+
+@keyframes move-right {
+    0% {
+      transform: translateX(-700px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
+
+.hero__info,
+.offers__container {
+    animation: move-left 1s linear;
+}
+
+@keyframes move-left {
+    0% {
+      transform: translateX(700px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
+  
+.btn:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.2s linear;    
+}
+
+.btn:active {
+    background: cornflowerblue; 
+    border: cornflowerblue 2px solid;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+#cart-toggle:checked~ .overlay,
+#toggle-menu:checked~ .overlay,
+#profile-toggle:checked~ .overlay {
+    display: block;
+}
+
+.navbar-list li,
+.footer__list li {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after,
+.footer__list a::after {
+    content:"";
+    height: 3px;
+    width: 100%;
+    background:cornflowerblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: all 0.4s ease;
+}
+
+.navbar-list li a:hover::after,
+.footer__list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+    transition: all 0.4s ease;
+}
+
+.navbar-list a:active,
+.footer__list a:active {
+    background: cornflowerblue;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.cart-icon:hover,
+.profile:hover,
+.toggle-menu:hover,
+.home:hover {
+    border-radius: 50%;
+    background: cornflowerblue;
+    padding: 10px;
+    transition: all 0.2s linear;
+}
+
+.cart-icon:active,
+.profile:active,
+.toggle-menu:active,
+.home:active {
+    color: black;
+    scale: 1.1;
+    transition: all 0.2s linear;
+}
+
+.up:hover  {
+    background-color: green;
+    border: green 3px solid;
+}
+
+.up:active {
+    box-shadow: 0px 0px 10px rgba(9, 101, 23, 0.8);
+}
+
+.down:hover  {
+    background-color: red;
+    border: red 3px solid;
+}
+
+.down:active {
+    box-shadow: 0px 0px 10px rgba(110, 2, 2, 0.8);
+}
+
+
+.shopping:hover {
+    color: black;
+    scale: 1.2;
+    transition: all 0.2s linear;
+    text-decoration: underline;
+}
+
+.shopping:active {
+    font-weight: 600;
+    scale: 1.1;
+}
+
+.offers__info:hover,
+.item-cart:hover,
+.warranty__info:hover {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 80%);
+    transition: all 0.2s linear; 
+}
+
+#offers p a:hover {
+    color: cornflowerblue;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.4s linear;
+    max-width: 400px;
+    padding: 0px 10px;
+}
+
+/* .warranty__container img {
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+} */
+
+#about-us img {
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+}
+
+.follow-us li:hover {
+    background-size: cover;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.2s linear; 
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 80%);
+}
+
+.follow-us li:hover:nth-child(2) {
+    background-image: url(./img/fondo-logos/instagram-background-gradient-colors_23-2147821882.avif);
+}
+
+.follow-us li:hover:nth-child(3) {
+    background: rgb(56, 82, 154);
+}
+
+.follow-us li:hover:nth-child(4) {
+    background: rgb(28, 154, 235);
+}
+
+.follow-us li:hover:nth-child(5) {
+    background: rgb(247, 0, 0);
+}
+
+.whatsapp-link:hover {
+    background-color: darkgreen;
+    box-shadow: 0px 0px 20px rgb(255 255 255 / 80%);
+  }

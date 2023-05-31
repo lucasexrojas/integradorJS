@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/mediaquereis.css">
+    <link rel="stylesheet" href="./assets/animaciones.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Lucky Technology</title>
+</head>
+<body>
+  <!-- header -->
+    <header class="header">
+      <a href="./index.html" class="header__logo">
+        <!-- <img src="./assets/img/logo2.png" alt="logo" class="logo-img"> -->
+      </a>
+      <nav class="navbar">
+        <label for="toggle-menu" class="menu-label">
+          <i class="fa-solid fa-bars-staggered toggle-menu"></i>
+        </label>
+        <input type="checkbox" id="toggle-menu">
+        <ul class="navbar-list">
+          <li>
+            <a href="#hero">Home</a>
+          </li>
+          <li>
+            <a href="#offers">Productos</a>
+          </li>
+          <li>
+            <a href="#contact">Contacto</a>
+          </li>
+          <li>
+            <a href="#about-us">Nosotros</a>
+          </li>
+        </ul>
+        <!-- login and register -->
+        <label for="profile-toggle" class="profile-label">
+          <i class="fa-solid fa-user profile"></i>
+        </label>
+        <input type="checkbox" id="profile-toggle">
+        <div class="login-register">
+          <h2>Ingresa o crea una cuenta</h2>
+          <a href="./pages/login.html" class="btn btn--primary">INICIAR SESIÓN</a>
+          <a href="./pages/register.html" class="btn btn--left">CREAR CUENTA</a>
+        </div>
+        <!-- carrito -->
+        <label for="cart-toggle" class="cart-label">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+        </label>
+        <input type="checkbox" id="cart-toggle"/>
+        <div class="cart">
+          <h2>Tus compras</h2>
+          <div class="item-cart">
+            <img src="./assets/img/cards/celular_motorola_moto_g22_128gb_4gb_negro-removebg-preview.png" alt="moto_g22">
+            <div class="item-info">
+              <h3 class="item.title">Moto G22 128 GB  cosmic black 4 GB RAM</h3>
+              <p class="item-bid">6 cuotas sin interes</p>
+              <span class="item-price">$59.999,00</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler up">+</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler down">-</span>
+            </div>
+          </div>
+          <div class="item-cart">
+            <img src="./assets/img/cards/tab1-removebg-preview.png" alt="moto_g22">
+            <div class="item-info">
+              <h3 class="item.title">Tablet Samsung Galaxy TAB A7 Lite 32/3GB Dark Grey</h3>
+              <p class="item-bid">6 cuotas sin interes</p>
+              <span class="item-price">$47.999,00</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler up">+</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler down">-</span>
+            </div>
+          </div>
+          <div class="item-cart">
+            <img src="./assets/img/cards/NOTEBOOK LENOVO IP 3-PhotoRoom.png-PhotoRoom.png" alt="moto_g22">
+            <div class="item-info">
+              <h3 class="item.title">NOTEBOOK LENOVO IP 3 15IML05 I3 4G 256G 11S</h3>
+              <p class="item-bid">6 cuotas sin interes</p>
+              <span class="item-price">$160.799,00</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler up">+</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler down">-</span>
+            </div>
+          </div>
+          <div class="item-cart">
+            <img src="./assets/img/cards/combo_gamer_3_en_1_greenfox_gfc6100_negro-removebg-preview.png" alt="moto_g22">
+            <div class="item-info">
+              <h3 class="item.title">Combo Gamer 3 En 1 GreenFox GFC6100 Negro</h3>
+              <p class="item-bid">6 cuotas sin interes</p>
+              <span class="item-price">$5.889,00</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler up">+</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler down">-</span>
+            </div>
+          </div>
+          <div class="item-cart">
+            <img src="./assets/img/cards/smartwatch_colmi_land_1_colores_varios-removebg-preview.png" alt="moto_g22">
+            <div class="item-info">
+              <h3 class="item.title">Smartwatch Colmi Land 1 Negro Silicona Táctil 1.3 Ips 74g</h3>
+              <p class="item-bid">6 cuotas sin interes</p>
+              <span class="item-price">$13.322,00</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler up">+</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler down">-</span>
+            </div>
+          </div>
+          <span class="divider"></span>
+          <div class="cart-total">
+            <p>Total:</p>
+            <span> $287.918,00</span>
+          </div>
+          <button class="shopping">Comprar</button>
+        </div>
+        <div class="overlay">
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main class="main">
+      <!-- hero -->
+      <section id="hero">
+        <div class="hero__card">
+          <!-- <video src="./assets/vid/Galaxy Z Flip4_ Unveiling _ Samsung.mp4" class="hero__card__vid" autoplay controls> -->
+          </video>
+        </div>
+        <div class="hero__info">
+          <h1>Lucky Technology
+            <span class="hero__info--span">te ofrece +500 productos con descuentos imperdibles</span>
+          </h1>
+          <p>Pensamos en vos y tenemos preparado la mayor variedad de productos y calidad para que tengas acutalizadas tus necesidades.</p>
+          <div class="hero__info__btn">
+            <a href="#" class="btn btn--primary">Mas info...</a>
+            <a href="#" class="btn btn--left">Ver promociones</a>
+          </div>
+        </div>
+      </section>
+      <!-- offers -->
+      <section id="offers">
+        <h2 class="offers__title">Aprovecha estas ofertas imperdibles</h2>
+        <div class="offers__categories">
+          <button href="#" class="btn active">🎉Ofertas</button>
+          <button href="#" class="btn category" data-categoty="celulares">📱Celulares</button>
+          <button href="#" class="btn category" data-categoty="tablets">📱Tablets</button>
+          <button href="#" class="btn category" data-categoty="notebooks">💻Notebooks</button>
+          <button href="#" class="btn category" data-categoty="gamers">👾Gamers</button>
+          <button href="#" class="btn category" data-categoty="accesorios">🖱️Accesorios</button>
+        </div>
+        <div class="offers__container">
+          <!-- <div class="offers__info">
+            <h2>Moto G22 128 GB  cosmic black 4 GB RAM</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/cards/celular_motorola_moto_g22_128gb_4gb_negro-removebg-preview.png" alt="moto_g22">
+            </div>
+            <h3>$59.999,00
+              <span>8% OFF</span>
+            </h3>
+            <p>6 cuotas sin interes  
+              <span>Envio gratis</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Tablet Samsung Galaxy TAB A7 Lite 32/3GB Dark Grey</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/cards/tab1-removebg-preview.png" alt="Galaxy TAB A7 Lite">
+            </div>
+            <h3>$47.999,00
+              <span>5% OFF</span>
+            </h3>
+            <p>6 cuotas sin interes 
+              <span>Envio gratis</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>NOTEBOOK LENOVO IP 3 15IML05 I3 4G 256G 11S</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/cards/NOTEBOOK LENOVO IP 3-PhotoRoom.png-PhotoRoom.png" alt="NOTEBOOK LENOVO IP 3">
+            </div>
+            <h3>$160.799,00
+              <span>15% OFF</span>
+            </h3>
+            <p>6 cuotas sin interes  
+              <span>Envio gratis</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Combo Gamer 3 En 1 GreenFox GFC6100 Negro</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/cards/combo_gamer_3_en_1_greenfox_gfc6100_negro-removebg-preview.png" alt="combo_gamer_3_en_1_greenfox">
+            </div>
+            <h3>$5.889,00
+              <span>8% OFF</span>
+            </h3>
+            <p>6 cuotas sin interes  
+              <span>Envio gratis</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Smartwatch Colmi Land 1 Negro Silicona Táctil 1.3 Ips 74g</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/cards/smartwatch_colmi_land_1_colores_varios-removebg-preview.png" alt="smartwatch_colmi_land_1">
+            </div>
+            <h3>$13.322,00
+              <span>5% OFF</span>
+            </h3>
+            <p>6 cuotas sin interes
+              <span>Envio gratis</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div> -->
+        </div>
+        <a href="" class="btn btn--primary showMore">Ver mas...</a>
+        <p class="p-end">Promocion valida por tiempo limitado o hasta agotar stock y cuotas sin interes con tarjetas de bancos selecionados.<a href="#"> Para mas informacion consulte Bases y Condiciones</a></p>
+      </section>
+      <!-- warranty -->
+      <section id="warranty">
+        <h2 class="warranty__title">Compra Fácil Rápido y Seguro</h2>
+        <div class="warranty__container">
+          <div class="warranty__info">
+            <img src="./assets/img/warranty.png" alt="warranty">
+            <h3>Garantia</h3>
+            <p>En Lucky Technology comprá tranquilo porque TODOS nuestros productos SIEMPRE cuentan con garantía.</p>
+          </div>
+          <div class="warranty__info">
+            <img src="./assets/img/shipping.png" alt="shipping">
+            <h3>Envio gratis</h3>
+            <p>Cualquier compra superior a $4000 o llevando 2 o mas productos te lo enviamos sin costo.</p>
+          </div>
+          <div class="warranty__info">
+            <img src="./assets/img/payments.png" alt="payments">
+            <h3>Elegis como pagar</h3>
+            <p>Podés comprar con tarjeta, débito, efectivo o transferencia.</p>
+          </div>
+        </div>
+        </section>
+      <!-- about-us -->
+      <section id="about-us">
+        <div class="about__img">
+          <img src="./assets/img/logo.png" alt="logo-lt">
+        </div>
+        <div class="about__content">
+          <h2>#Somos <span>Lucky Technology</span></h2>
+          <p>Nuestro servicio dedica su talento, logistica y  tecnología para proveerte productos superiores que puedan cubrir todas tus necesidades y transmirtir confienza. </p>
+        </div>
+      </section>
+      <!-- Contacto -->
+      <section id="contact">
+        <h2 class="contact__title">Contactanos</h2>
+        <div class="info__container">
+          <form class="form__container">
+            
+            <div>
+              <!-- <label for="name">Nombre</label> -->
+              <input class="date" type="text" id="name" placeholder="Ingrese su nombre">
+            </div>
+            <div>
+              <!-- <label for="surname">Apellido</label> -->
+              <input class="date" type="text" id="surname" placeholder="Ingrese su apellido">
+            </div>
+            <div>
+              <!-- <label for="email">Correo</label> -->
+              <input class="date" type="email" id="email" placeholder="Ingrese su correo">
+            </div>
+            <div>
+              <!-- <label for="texto">Contanos tu experiencia</label> -->
+              <textarea class="date" id="texto" cols="30" rows="10"placeholder="Escriba aqui su comentario"></textarea>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="checkbox1">
+              <label for="ckeckbox1">Desea recibir informacion reacionada a productos y servicios Lucky Technology.</label>
+            </div>
+            <div>
+              <a class="btn btn--primary" href="./index.html">Enviar</a>
+            </div>
+          </form>
+          <div class="contact-us">
+            <p>Direccion: <span>Los Colonizadores 5429, H3503KJW Barranqueras, Chaco</span></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.4770099169727!2d-58.93036998551503!3d-27.485536823955755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944572af61fe7567%3A0x7158f9eb21364611!2sLos%20Colonizadores%205429%2C%20H3503KJW%20Barranqueras%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1675192891864!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <a href="https://wa.me/5493624828029" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer-container">
+      <span class="divider"></span>
+      <ul class="footer__list">
+        <li>
+           <a href="#">Trabajá con nosotros</a>
+        </li>
+         <li>
+          <a href="#">Terminos y Condiciones</a>
+        </li>
+         <li>
+          <a href="#">Boton de Arrepentimiento</a>
+        </li>
+         <li>
+          <a href="#">Defensa al Consumidor</a>
+         </li>
+         <li>
+          <a href="#">Ayuda</a>
+         </li>
+       </ul>
+       <div class="foot">
+         <p>Copyright© 2023 Lucky Technology Todos los Derechos Reservados.</p>
+         <span>Sitio compatible con Internet Explorer 11 o superior y las últimas versiones de Chrome y Mozilla Firefox.</span>
+       </div>
+       <div class="follow-us">
+        <h3>Seguinos en:</h3>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li> 
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>    
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </div>
+       <div class="creator">
+        <a href="https://www.linkedin.com/in/lucas-rojas-b95983232/">Created with much love by: Lucas Rojas🤯</a>
+       </div>
+    </footer>
+
+  <script src="./assets/data.js"></script>
+  <script src="./assets/index.js"></script>
+    <script src="./assets/img/celulares/Samsung Galaxy A04e 64 Gb  Negro 3 Gb Ram.jpg"></script>
+</body>
+</html>
