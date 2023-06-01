@@ -50,22 +50,22 @@ const showMoreProducts = (e) => {
 }
 
 
-const inactiveFilter = (e) => {
+const inactiveFilter = (element) => {
     return (
-        e.classList.contains("category") &&
-        !e.classList.contains("active")
+        element.classList.contains("category") &&
+        !element.classList.contains("active")
     );
 };
 
 const changeBtnActiveState = (selectedCategory) => {
     const categories = [...categoriesList];
     categories.forEach((categoryBtn) => {
-    if (categoryBtn.dataset.category !== selectedCategory){
-        categoryBtn.classList.remove("active");
-        return;
-    }
-    categoryBtn.classList.add("active");
-  });
+        if (categoryBtn.dataset.category !== selectedCategory) {
+            categoryBtn.classList.remove("active");
+        } else {
+            categoryBtn.classList.add("active");
+        }
+    });
 };
 
 const changeFilerState = (btn) => {
