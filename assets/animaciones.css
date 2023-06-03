@@ -42,8 +42,7 @@ html {
     border: cornflowerblue 2px solid;
 }
 
-.overlay {
-    display: none;
+.show-overlay {
     position: absolute;
     top: 80px;
     left: 0;
@@ -161,19 +160,6 @@ html {
     padding: 0px 10px;
 }
 
-/* .warranty__container img {
-    animation: rotate 6s linear infinite;
-}
-
-@keyframes rotate {
-    from{
-        transform: rotateY(0deg);
-    }
-
-    to {
-        transform: rotateY(360deg);
-    }
-} */
 
 #about-us img {
     animation: float 2s linear infinite;

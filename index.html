@@ -22,11 +22,13 @@
       <a href="./index.html" class="header__logo">
         <!-- <img src="./assets/img/logo2.png" alt="logo" class="logo-img"> -->
       </a>
+
+      <!-- Menu hamburguesa -->
       <nav class="navbar">
-        <label for="toggle-menu" class="menu-label">
+        <div class="menu-label">
           <i class="fa-solid fa-bars-staggered toggle-menu"></i>
-        </label>
-        <input type="checkbox" id="toggle-menu">
+        </div>
+        
         <ul class="navbar-list">
           <li>
             <a href="#hero">Home</a>
@@ -42,91 +44,33 @@
           </li>
         </ul>
         <!-- login and register -->
-        <label for="profile-toggle" class="profile-label">
+        <div class="profile-label">
           <i class="fa-solid fa-user profile"></i>
-        </label>
-        <input type="checkbox" id="profile-toggle">
+        </div>
+        
         <div class="login-register">
           <h2>Ingresa o crea una cuenta</h2>
           <a href="./pages/login.html" class="btn btn--primary">INICIAR SESIÓN</a>
           <a href="./pages/register.html" class="btn btn--left">CREAR CUENTA</a>
         </div>
+        
         <!-- carrito -->
-        <label for="cart-toggle" class="cart-label">
-          <i class="fa-solid fa-cart-shopping cart-icon"></i>
-        </label>
-        <input type="checkbox" id="cart-toggle"/>
+        <div class="cart-label">
+					<i class="fa-solid fa-cart-shopping cart-icon"></i>
+				</div>
+
+        <!-- compras -->
         <div class="cart">
           <h2>Tus compras</h2>
-          <div class="item-cart">
-            <img src="./assets/img/cards/celular_motorola_moto_g22_128gb_4gb_negro-removebg-preview.png" alt="moto_g22">
-            <div class="item-info">
-              <h3 class="item.title">Moto G22 128 GB  cosmic black 4 GB RAM</h3>
-              <p class="item-bid">6 cuotas sin interes</p>
-              <span class="item-price">$59.999,00</span>
-            </div>
-            <div class="item-handler">
-              <span class="quantity-handler up">+</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler down">-</span>
-            </div>
+
+          <div class="cart-container">
+            <!-- iqui se agrega el producto al carrito -->
           </div>
-          <div class="item-cart">
-            <img src="./assets/img/cards/tab1-removebg-preview.png" alt="moto_g22">
-            <div class="item-info">
-              <h3 class="item.title">Tablet Samsung Galaxy TAB A7 Lite 32/3GB Dark Grey</h3>
-              <p class="item-bid">6 cuotas sin interes</p>
-              <span class="item-price">$47.999,00</span>
-            </div>
-            <div class="item-handler">
-              <span class="quantity-handler up">+</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler down">-</span>
-            </div>
-          </div>
-          <div class="item-cart">
-            <img src="./assets/img/cards/NOTEBOOK LENOVO IP 3-PhotoRoom.png-PhotoRoom.png" alt="moto_g22">
-            <div class="item-info">
-              <h3 class="item.title">NOTEBOOK LENOVO IP 3 15IML05 I3 4G 256G 11S</h3>
-              <p class="item-bid">6 cuotas sin interes</p>
-              <span class="item-price">$160.799,00</span>
-            </div>
-            <div class="item-handler">
-              <span class="quantity-handler up">+</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler down">-</span>
-            </div>
-          </div>
-          <div class="item-cart">
-            <img src="./assets/img/cards/combo_gamer_3_en_1_greenfox_gfc6100_negro-removebg-preview.png" alt="moto_g22">
-            <div class="item-info">
-              <h3 class="item.title">Combo Gamer 3 En 1 GreenFox GFC6100 Negro</h3>
-              <p class="item-bid">6 cuotas sin interes</p>
-              <span class="item-price">$5.889,00</span>
-            </div>
-            <div class="item-handler">
-              <span class="quantity-handler up">+</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler down">-</span>
-            </div>
-          </div>
-          <div class="item-cart">
-            <img src="./assets/img/cards/smartwatch_colmi_land_1_colores_varios-removebg-preview.png" alt="moto_g22">
-            <div class="item-info">
-              <h3 class="item.title">Smartwatch Colmi Land 1 Negro Silicona Táctil 1.3 Ips 74g</h3>
-              <p class="item-bid">6 cuotas sin interes</p>
-              <span class="item-price">$13.322,00</span>
-            </div>
-            <div class="item-handler">
-              <span class="quantity-handler up">+</span>
-              <span class="item-quantity">1</span>
-              <span class="quantity-handler down">-</span>
-            </div>
-          </div>
+
           <span class="divider"></span>
           <div class="cart-total">
             <p>Total:</p>
-            <span> $287.918,00</span>
+            <span class="total"> $287.918,00</span>
           </div>
           <button class="shopping">Comprar</button>
         </div>
@@ -164,73 +108,12 @@
           <button class="btn category" data-category="gamers">👾Gamers</button>
           <button class="btn category" data-category="accesorios">🖱️Accesorios</button>
         </div>
+
+        <!-- contenedor de los productos -->
         <div class="offers__container">
-          <!-- <div class="offers__info">
-            <h2>Moto G22 128 GB  cosmic black 4 GB RAM</h2>
-            <div class="offers__info__img">
-              <img src="./assets/img/cards/celular_motorola_moto_g22_128gb_4gb_negro-removebg-preview.png" alt="moto_g22">
-            </div>
-            <h3>$59.999,00
-              <span>8% OFF</span>
-            </h3>
-            <p>6 cuotas sin interes  
-              <span>Envio gratis</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="offers__info">
-            <h2>Tablet Samsung Galaxy TAB A7 Lite 32/3GB Dark Grey</h2>
-            <div class="offers__info__img">
-              <img src="./assets/img/cards/tab1-removebg-preview.png" alt="Galaxy TAB A7 Lite">
-            </div>
-            <h3>$47.999,00
-              <span>5% OFF</span>
-            </h3>
-            <p>6 cuotas sin interes 
-              <span>Envio gratis</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="offers__info">
-            <h2>NOTEBOOK LENOVO IP 3 15IML05 I3 4G 256G 11S</h2>
-            <div class="offers__info__img">
-              <img src="./assets/img/cards/NOTEBOOK LENOVO IP 3-PhotoRoom.png-PhotoRoom.png" alt="NOTEBOOK LENOVO IP 3">
-            </div>
-            <h3>$160.799,00
-              <span>15% OFF</span>
-            </h3>
-            <p>6 cuotas sin interes  
-              <span>Envio gratis</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="offers__info">
-            <h2>Combo Gamer 3 En 1 GreenFox GFC6100 Negro</h2>
-            <div class="offers__info__img">
-              <img src="./assets/img/cards/combo_gamer_3_en_1_greenfox_gfc6100_negro-removebg-preview.png" alt="combo_gamer_3_en_1_greenfox">
-            </div>
-            <h3>$5.889,00
-              <span>8% OFF</span>
-            </h3>
-            <p>6 cuotas sin interes  
-              <span>Envio gratis</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="offers__info">
-            <h2>Smartwatch Colmi Land 1 Negro Silicona Táctil 1.3 Ips 74g</h2>
-            <div class="offers__info__img">
-              <img src="./assets/img/cards/smartwatch_colmi_land_1_colores_varios-removebg-preview.png" alt="smartwatch_colmi_land_1">
-            </div>
-            <h3>$13.322,00
-              <span>5% OFF</span>
-            </h3>
-            <p>6 cuotas sin interes
-              <span>Envio gratis</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div> -->
+            <!-- aca se renderizan los productos -->
         </div>
+
         <a href="" class="btn btn--primary showMore">Ver mas...</a>
         <p class="p-end">Promocion valida por tiempo limitado o hasta agotar stock y cuotas sin interes con tarjetas de bancos selecionados.<a href="#"> Para mas informacion consulte Bases y Condiciones</a></p>
       </section>
@@ -351,6 +234,5 @@
 
   <script src="./assets/data.js"></script>
   <script src="./assets/index.js"></script>
-    <script src="./assets/img/celulares/Samsung Galaxy A04e 64 Gb  Negro 3 Gb Ram.jpg"></script>
 </body>
 </html>

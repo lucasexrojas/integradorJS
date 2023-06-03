@@ -24,6 +24,10 @@
         display: none;
     }
 
+    .open-menu{
+        display: flex;
+    };
+
     #toggle-menu:checked + .navbar-list {
         display: flex;
         transition: all 0.7s linear;
