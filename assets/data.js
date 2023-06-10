@@ -25,7 +25,7 @@ const productsData = [
 		price: 69.999,
 		category: "celulares",
         // item: "",
-		cardImg:"./assets/img/celulares/A04s.webp",
+		img:"./assets/img/celulares/A04s.webp",
 	},
     {
 		id: 2,
@@ -33,7 +33,7 @@ const productsData = [
 		price: 89.999,
 		category: "celulares",
         // item: "",
-		cardImg: "./assets/img/celulares/G42.webp",
+		img: "./assets/img/celulares/G42.webp",
 	},
     {
 		id: 3,
@@ -41,7 +41,7 @@ const productsData = [
 		price: 49.999,
 		category: "celulares",
         // item: "",
-		cardImg: "./assets/img/celulares/a04e.webp",
+		img: "./assets/img/celulares/a04e.webp",
 	},
     {
 		id: 4,
@@ -49,7 +49,7 @@ const productsData = [
 		price: 239.999,
 		category: "celulares",
         // item: "",
-		cardImg: "./assets/img/celulares/Edge-30.webp",
+		img: "./assets/img/celulares/Edge-30.webp",
 	},
     {
 		id: 5,
@@ -57,7 +57,7 @@ const productsData = [
 		price: 339.999,
 		category: "celulares",
         // item: "",
-		cardImg: "./assets/img/celulares/Z-Flip4.webp",
+		img: "./assets/img/celulares/Z-Flip4.webp",
 	},
     //Tablets
     {
@@ -66,7 +66,7 @@ const productsData = [
 		price: 79.999,
 		category: "tablets",
         // item: "",
-		cardImg: "./assets/img/tablets/Galaxy-Tab-A7-Lite.webp",
+		img: "./assets/img/tablets/Galaxy-Tab-A7-Lite.webp",
 	},
     {
 		id: 7,
@@ -74,7 +74,7 @@ const productsData = [
 		price: 555.999,
 		category: "tablets",
         // item: "",
-		cardImg: "./assets/img/tablets/Tab-S8.webp",
+		img: "./assets/img/tablets/Tab-S8.webp",
 	},
     {
 		id: 8,
@@ -82,7 +82,7 @@ const productsData = [
 		price: 193.999,
 		category: "tablets",
         // item: "",
-		cardImg: "./assets/img/tablets/Tab-S6.webp",
+		img: "./assets/img/tablets/Tab-S6.webp",
 	},
     {
 		id: 9,
@@ -90,7 +90,7 @@ const productsData = [
 		price: 134.999,
 		category: "tablets",
         // item: "",
-		cardImg: "./assets/img/tablets/Ta-A8.webp",
+		img: "./assets/img/tablets/Ta-A8.webp",
 	},
     {
 		id: 10,
@@ -98,7 +98,7 @@ const productsData = [
 		price: 79.999,
 		category: "tablets",
         // item: "",
-		cardImg: "./assets/img/tablets/Tab-A7-Lite-32.webp",
+		img: "./assets/img/tablets/Tab-A7-Lite-32.webp",
 	},
     //Noteboks
     {
@@ -107,7 +107,7 @@ const productsData = [
 		price: 278.999,
 		category: "notebooks",
         // item: "",
-		cardImg: "./assets/img/notebooks/Vaio-Intelcore-I5.webp",
+		img: "./assets/img/notebooks/Vaio-Intelcore-I5.webp",
 	},
     {
 		id: 12,
@@ -115,7 +115,7 @@ const productsData = [
 		price: 276.999,
 		category: "notebooks",
         // item: "",
-		cardImg: "./assets/img/notebooks/Vaio-Fe-15.webp",
+		img: "./assets/img/notebooks/Vaio-Fe-15.webp",
 	},
     {
 		id: 13,
@@ -123,7 +123,7 @@ const productsData = [
 		price: 760.999,
 		category: "notebooks",
         // item: "",
-		cardImg: "./assets/img/notebooks/Asus-Core-I7.webp",
+		img: "./assets/img/notebooks/Asus-Core-I7.webp",
 	},
     {
 		id: 14,
@@ -131,7 +131,7 @@ const productsData = [
 		price: 805.999,
 		category: "notebooks",
         // item: "",
-		cardImg: "./assets/img/notebooks/AcerNitro.webp",
+		img: "./assets/img/notebooks/AcerNitro.webp",
 	},
     {
 		id: 15,
@@ -139,7 +139,7 @@ const productsData = [
 		price: 509.999,
 		category: "notebooks",
         // item: "",
-		cardImg: "./assets/img/notebooks/Dell-Latitude-3420-I5.webp",
+		img: "./assets/img/notebooks/Dell-Latitude-3420-I5.webp",
 	},
     //Gamers
     {
@@ -148,7 +148,7 @@ const productsData = [
 		price: 60.999,
 		category: "gamers",
         // item: "",
-		cardImg: "./assets/img/gamers/Silla-Gaming-Rojo.webp",
+		img: "./assets/img/gamers/Silla-Gaming-Rojo.webp",
 	},
     {
 		id: 17,
@@ -156,7 +156,7 @@ const productsData = [
 		price: 36.999,
 		category: "gamers",
         // item: "",
-		cardImg: "./assets/img/gamers/Joystick-Purple.webp",
+		img: "./assets/img/gamers/Joystick-Purple.webp",
 	},
     {
 		id: 18,
@@ -164,7 +164,7 @@ const productsData = [
 		price: 36.999,
 		category: "gamers",
         // item: "",
-		cardImg: "./assets/img/gamers/Joystick-Red.webp",
+		img: "./assets/img/gamers/Joystick-Red.webp",
 	},
     {
 		id: 19,
@@ -172,7 +172,7 @@ const productsData = [
 		price: 209.999,
 		category: "gamers",
         // item: "",
-		cardImg: "./assets/img/gamers/Monitor-Color-27.webp",
+		img: "./assets/img/gamers/Monitor-Color-27.webp",
 	},
     {
 		id: 20,
@@ -180,7 +180,7 @@ const productsData = [
 		price: 62.999,
 		category: "gamers",
         // item: "",
-		cardImg: "./assets/img/gamers/Silla-Gaming-green.webp",
+		img: "./assets/img/gamers/Silla-Gaming-green.webp",
 	},
     //Smartwatchs
     {
@@ -189,7 +189,7 @@ const productsData = [
 		price: 133.748,
 		category: "accesorios",
         // item: "",
-		cardImg: "./assets/img/accesorios/D_NQ_NP_618995-MLA51652186268_092022-V.webp",
+		img: "./assets/img/accesorios/D_NQ_NP_618995-MLA51652186268_092022-V.webp",
 	},
     {
 		id: 22,
@@ -197,7 +197,7 @@ const productsData = [
 		price: 195.999,
 		category: "accesorios",
         // item: "",
-		cardImg: "./assets/img/accesorios/D_NQ_NP_936069-MLA51439791973_092022-V.webp",
+		img: "./assets/img/accesorios/D_NQ_NP_936069-MLA51439791973_092022-V.webp",
 	},
     {
 		id: 23,
@@ -205,7 +205,7 @@ const productsData = [
 		price: 89.999,
 		category: "accesorios",
         // item: "",
-		cardImg: "./assets/img/accesorios/D_NQ_NP_893375-MLA69141989093_042023-V.webp",
+		img: "./assets/img/accesorios/D_NQ_NP_893375-MLA69141989093_042023-V.webp",
 	},
     {
 		id: 24,
@@ -213,7 +213,7 @@ const productsData = [
 		price: 133.748,
 		category: "accesorios",
         // item: "",
-		cardImg: "./assets/img/accesorios/D_NQ_NP_629227-MLA69137154644_042023-V.webp",
+		img: "./assets/img/accesorios/D_NQ_NP_629227-MLA69137154644_042023-V.webp",
 	},
     {
 		id: 25,
@@ -221,12 +221,12 @@ const productsData = [
 		price: 135.999,
 		category: "accesorios",
         // item: "",
-		cardImg: "./assets/img/accesorios/D_NQ_NP_835768-MLA69141917461_042023-V.webp",
+		img: "./assets/img/accesorios/D_NQ_NP_835768-MLA69141917461_042023-V.webp",
 	},
 ];    
 
 //dividir los producotos en partes mas pewqueñas
-splitProdcuts = (num) => {  
+splitProducts = (num) => {  
     let listProduct = [];
     for(let i = 0; i < productsData.length; i += num){
         listProduct.push(productsData.slice(i, i + num));
@@ -235,7 +235,7 @@ splitProdcuts = (num) => {
 
 };
 
-const dividedProducts = splitProdcuts(5);
+const dividedProducts = splitProducts(5);
 
 const appState = {
 	products: dividedProducts,

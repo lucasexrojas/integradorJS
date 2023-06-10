@@ -12,6 +12,10 @@ const profile = document.querySelector(".profile-label");
 const loginAndRegister = document.querySelector(".login-register");
 const cartContainer =document.querySelector(".cart-container");
 const total = document.querySelector(".total");
+const addComment = document.querySelector(".add-comment");
+const buy = document.querySelector(".buy");
+const deleteProduct = document.querySelector(".delete-product");
+const cartIcon = document.querySelector(".cart-icon");
 
 let productCart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -21,12 +25,12 @@ localStorage.setItem("cart",JSON.stringify(productCart));
 
 // Crea una card de producto basada en los datos de cada uno
 const createProductCard = (product) => {
-    const {id, name, price, cardImg} = product
+    const {id, name, price, img} = product;
     return `
         <div class="offers__info">
             <h2>${name}</h2>
             <div class="offers__info__img">
-                <img class="product-img" src=${cardImg} alt=${name}/>
+                <img class="product-img" src=${img} alt=${name}/>
             </div>
             <div>
                 <h3>${price}
@@ -40,7 +44,7 @@ const createProductCard = (product) => {
                 data-id="${id}"
                 data-name="${name}"
                 data-price="${price}"
-                data-img="${cardImg}" 
+                data-img="${img}" 
                 >
             </i>
         </div>`
@@ -68,7 +72,7 @@ const showMoreProducts = (e) => {
 }
 
 // Verifica si un elemento no esta activo y es una categoría
-const inactiveFilter = (element) => {
+const isInactiveFilter = (element) => {
     return (
         element.classList.contains("category") &&
         !element.classList.contains("active")
@@ -109,7 +113,7 @@ const renderFilteredProducts = () => {
 
 // Aplica el filtro al hacer clic en un elemento y verifica si es un botón de categoría
 const applyfilter = ({ target }) => {
-    if(!inactiveFilter(target)) {   
+    if(!isInactiveFilter(target)) {   
         return;
     }
     changeFilerState(target);
@@ -173,10 +177,10 @@ const closeOnScroll = () => {
 };
 
 const createProductInCart = (cartProduct) => {
-    const {id, name, price, cardImg, quantity}  = cartProduct;
+    const {id, name, img, price, quantity}  = cartProduct;
     return `
     <div class="item-cart">
-        <img src=${cardImg} alt=${name}>
+        <img src=${img} alt=${name}/>
         <div class="item-info">
             <h3 class="item.title">${name}</h3>
             <p class="item-bid">6 cuotas sin interes</p>
@@ -188,11 +192,11 @@ const createProductInCart = (cartProduct) => {
             <span class="quantity-handler down" data-id="${id}">-</span>
         </div>
     </div>
-    `
+    `;
 };
 
 const renderCart = () => {
-    if(!productCart.lenght) {
+    if(!productCart.length) {
         cartContainer.innerHTML = `<p class="item-bid">No hay productos seleccionados</p>`
         return;
     }else {
@@ -207,15 +211,146 @@ const getCartTotal = () => {
 };
 
 const showCartTotal = () => {
-    total.innerHTML = `$${getCartTotal().toFixed(2)}`;
+    total.innerHTML = `$${getCartTotal().toFixed()}`;
+};
+
+const createProductData = (product) => {
+    const {id, name, img, price} = product;
+    return {id, name, img, price};
+};
+
+const existingCartProduct = (productId) => {
+    return productCart.find((item) => {
+        return item.id === productId;
+    });
+};
+
+const unitToPruduct = (product) => {
+    productCart = productCart.map((cartProduct) => {
+        return cartProduct.id === product.id
+            ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
+            : cartProduct;
+    });
+};
+
+const showSuccessComment = (msg) => {
+    addComment.classList.add("active-comment");
+    addComment.textContent = msg;
+    setTimeout(() => {
+        addComment.classList.remove("active-comment");
+    },2000);
+};
+
+const createCartProdcut = (product) => {
+    productCart =[
+        ...productCart,
+        {
+            ...product,
+            quantity: 1,
+        },
+    ];
+};
+
+const hideButton = (btn) => {
+    if (!productCart.length) {
+        btn.classList.add("hidden");
+    }else {
+        btn.classList.remove("hidden");
+    }
+};
+
+const cartAlert = () => {
+    if (productCart.length) {
+        cartIcon.classList.add("has-products");
+    } else {
+        cartIcon.classList.remove("has-products");
+    };
+};
+
+const updateCart = () => {
+    saveProductInCart();
+    renderCart();
+    showCartTotal();
+    hideButton(buy);
+    hideButton(deleteProduct);
+    cartAlert();
 };
 
 const addProduct = (e) => {
     if (!e.target.classList.contains("btn-add")){
         return;
-    }else {
-        
     }
+    const product = createProductData(e.target.dataset);
+    if(existingCartProduct(product.id)){
+        unitToPruduct(product);
+        showSuccessComment("Agregaste otra unidad al producto seleccionado");
+    }else {
+        createCartProdcut(product);
+        showSuccessComment("Se ha agregado un nuevo producto con exito")
+    };
+    updateCart();
+};
+
+const removeProductFromCart = (existingProduct) => {
+    productCart = productCart.filter((product) => {
+        return product.id !== existingProduct.id
+    });
+    updateCart();
+};
+
+const substractProductUnit = (existingProduct) =>{
+    productCart = productCart.map((product) =>{
+        return product.id === existingProduct.id
+                ? {...product, quantity: Number(product.quantity) - 1}
+                : product
+    });
+};
+
+const handleMinusBtn = (id) => {
+    const existingProduct = productCart.find((item) =>  item.id === id);
+    if(existingProduct.quantity === 1) {
+        if(window.confirm("¿Desea aliminar el porducto?")) {
+            removeProductFromCart(existingProduct);
+        }
+        return
+    };
+    substractProductUnit(existingProduct);
+};
+
+const handlePlusBtn = (id) => {
+    const existingProduct = productCart.find((item) =>  item.id === id);
+    unitToPruduct(existingProduct);
+};
+
+const handleQuantity = (e) => {
+     if(e.target.classList.contains("down")) {
+        handleMinusBtn(e.target.dataset.id);
+     } else if(e.target.classList.contains("up")) {
+        handlePlusBtn(e.target.dataset.id);
+     };
+     updateCart();
+};
+
+const resetCart = () => {
+    productCart = [];
+    updateCart();
+}
+
+const completeCartAction = (confirmMsg, successMSg) => {
+    if(productCart.length === 0) {
+        return
+    }if(window.confirm(confirmMsg)) {
+        resetCart();
+        alert(successMSg);
+    }
+}
+
+const completeBuy = () => {
+    completeCartAction("¿Desea concretar la compra?","¡Compra realizada con exito!");
+};
+
+const deleleCart = () => {
+    completeCartAction("¿Desea vacir el carrito?","¡Ah eliminado los productos!");
 };
 
 // Inicializa la aplicación
@@ -230,6 +365,13 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", renderCart);
     document.addEventListener("DOMContentLoaded", showCartTotal);
     offersContainer.addEventListener("click", addProduct);
-}
+    buy.addEventListener("click",completeBuy);
+    deleteProduct.addEventListener("click",deleleCart);
+    hideButton(buy);
+    hideButton(deleteProduct);
+    cartAlert();
+    cartContainer. addEventListener("click",handleQuantity);
+    
+};
 
 init();
