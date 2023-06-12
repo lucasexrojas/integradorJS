@@ -718,17 +718,21 @@ iframe {
 .add-comment {
     align-items: center;
     justify-content: center;
-    /* position: fixed; */
+    text-align: center;
+    position: fixed;
     padding: 20px 0px;
-    background-color: green;
+    background-color: blue;
     color: white;
-    transform: translateY(0%);
+    width: 50%;
+    bottom: 0;
+    transform: translateY(200%);
     transition: all 0.5s ease-in-out;
     z-index: 2;
     gap: 25px;
+    border-radius: 10px;
     display: flex;
 }
 .active-comment{
-    transform: translateY(0%);
+    transform: translateY(-50%);
     transition: all 0.5s ease-in-out;
 }

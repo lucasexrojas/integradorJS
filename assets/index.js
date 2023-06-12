@@ -238,7 +238,7 @@ const showSuccessComment = (msg) => {
     addComment.textContent = msg;
     setTimeout(() => {
         addComment.classList.remove("active-comment");
-    },2000);
+    },2500);
 };
 
 const createCartProdcut = (product) => {

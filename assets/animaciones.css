@@ -104,6 +104,8 @@ html {
     50% {
       transform: scale(1.1);
       color: #1e50ff;
+      border-radius: 50%;
+      background: grey;
     }
     100% {
       transform: scale(1);
