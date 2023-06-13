@@ -31,16 +31,28 @@
 
   <!-- main -->
   <main class="main">
-      <form class="form__container lr">
+      <form class="form__container lr" id="register-form">
         <h1 class="form__title">Disfruta de Más Beneficios</h1>
-        <label for="nombre">Nombre</label>
-        <input type="text" placeholder="" class="date" id="nombre">
-        <label for="apellido">Apellido</label>
-        <input type="text" placeholder="" class="date" id="apellido">
-        <label for="email">Email</label>
-        <input type="email" placeholder="" class="date" id="email">
-        <label for="password">Password</label>
-        <input type="password" placeholder="" class="date" id="password">
+
+        <div class="form-field">
+          <input type="text" placeholder="nombre" class="date" id="nombre">
+          <small></small>
+        </div>
+
+        <div class="form-field"></div>
+          <input type="text" placeholder="apellido" class="date" id="apellido">
+          <small></small>
+        </div>
+
+          <div class="form-field">
+          <input type="email" placeholder="email" class="date" id="email">
+          <small></small>
+        </div>
+        
+        <div class="form-field">
+        <input type="password" placeholder="password" class="date" id="password">
+        <small></small>
+        </div>
         <div class="check">
           <input type="checkbox" id="checkbox1">
           <label for="checkbox1">Desea recibir información relacionada a productos y servicios de Lucky Technology.</label>
@@ -78,6 +90,7 @@
         <a href="https://www.linkedin.com/in/lucas-rojas-b95983232/">Created with much love by: Lucas Rojas🤯</a>
        </div>
   </footer>
-
+  
+  <script src="../assets/register.js"></script>
 </body> 
 </html>
