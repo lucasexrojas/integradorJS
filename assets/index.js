@@ -211,7 +211,7 @@ const getCartTotal = () => {
 };
 
 const showCartTotal = () => {
-    total.innerHTML = `$${getCartTotal().toFixed()}`;
+    total.innerHTML = `$${getCartTotal().toFixed(3)}`;
 };
 
 const createProductData = (product) => {
@@ -352,6 +352,24 @@ const completeBuy = () => {
 const deleleCart = () => {
     completeCartAction("¿Desea vacir el carrito?","¡Ah eliminado los productos!");
 };
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let items = document.getElementsByClassName("carousel-item");
+    let currentItem = 0;
+  
+    // Mostrar el primer elemento del carrusel
+    items[currentItem].classList.add("active");
+  
+    // Función para mostrar el siguiente elemento
+    const showNextItem = () => {
+      items[currentItem].classList.remove("active");
+      currentItem = (currentItem + 1) % items.length;
+      items[currentItem].classList.add("active");
+    };
+
+    setInterval(showNextItem, 3000);
+});
 
 // Inicializa la aplicación
 const init = () => {
