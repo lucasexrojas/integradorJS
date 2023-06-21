@@ -41,7 +41,7 @@ const productsData = [
 		price: 49.999,
 		category: "celulares",
         // item: "",
-		img: "./assets/img/celulares/a04e.webp",
+		img: "./assets/img/celulares/A04e.webp",
 	},
     {
 		id: 4,
