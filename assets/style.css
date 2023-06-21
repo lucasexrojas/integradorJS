@@ -315,8 +315,6 @@ section {
     gap: 40px;
     max-width: 1300px;
     width: 90%;
-    background: rgb(8,20,33, 0.4);
-    border-radius: 20px;
 } 
 
 .btn {
