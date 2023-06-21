@@ -407,6 +407,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: white;
+    border-radius: 10px;
 }
 
 .hero__card__vid {
@@ -655,6 +657,10 @@ button {
     align-items: center;
 }
 
+.form-field {
+    max-width: 210px;
+}
+
 .form-field.success input {
     border: 3px solid #1e50ff;
 }
@@ -771,6 +777,19 @@ iframe {
 .active-comment{
     transform: translateY(-50%);
     transition: all 0.5s ease-in-out;
+}
+
+.password {
+    position: relative;
+}
+
+#showPassword {
+    position: absolute;
+    right: 5px;
+    transform: translateY(110%);
+    cursor: pointer;
+    user-select: none;
+
 }
 
 

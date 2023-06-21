@@ -96,7 +96,7 @@ const checkPassword = (input) => {
         return;
     }
     if(!isSecurePassword(input)) {
-        showError(input, "La contrseña debe contenee al menos una letra mayúscula, una letra minúscula, un carácter especial y una longitud mínima de 8");
+        showError(input, "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un carácter especial y una longitud mínima de 8");
         return;
     }
     
@@ -105,7 +105,7 @@ const checkPassword = (input) => {
     return valid;
 };
 
-const checkbooxPass = (input) => {
+const checkboxPass = (input) => {
     passwordInput.type = input.checked ? "text" : "password";
 };
 
@@ -139,7 +139,7 @@ const init = () => {
     lastNameInput.addEventListener("input",() => checkTextInput(lastNameInput));
     emailInput.addEventListener("input", () => checkEmail(emailInput));
     passwordInput.addEventListener("input", () => checkPassword(passwordInput));
-    showPasswordCheckbox.addEventListener("change", () => checkbooxPass(showPasswordCheckbox));
+    showPasswordCheckbox.addEventListener("change", () => checkboxPass(showPasswordCheckbox));
 };
 
 init();
