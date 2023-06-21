@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items[currentItem].classList.add("active");
     };
 
-    setInterval(showNextItem, 3000);
+    setInterval(showNextItem, 2000);
 });
 
 // Inicializa la aplicación
